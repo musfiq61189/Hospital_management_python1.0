@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('./images/app\ booking.jpg'); /* Replace with the actual image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 bg-opacity-70 min-h-screen">
+    <div class="container mx-auto py-8">
+        <!-- Back Button -->
+        <div class="mb-4">
+            <a href="index.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Back</a>
+        </div>
+
+        <!-- Appointments Table -->
+        <div class="bg-white shadow-md rounded p-4">
+            <h2 class="text-xl font-semibold mb-4">Appointments List</h2>
+            <table class="table-auto w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-300 px-4 py-2">Appointment ID</th>
+                        <th class="border border-gray-300 px-4 py-2">Patient ID</th>
+                        <th class="border border-gray-300 px-4 py-2">Patient Name</th>
+                        <th class="border border-gray-300 px-4 py-2">Doctor ID</th>
+                        <th class="border border-gray-300 px-4 py-2">Doctor Name</th>
+                        <th class="border border-gray-300 px-4 py-2">Date</th>
+                        <th class="border border-gray-300 px-4 py-2">Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">001</td>
+                        <td class="border border-gray-300 px-4 py-2">001</td>
+                        <td class="border border-gray-300 px-4 py-2">Mehedi</td>
+                        <td class="border border-gray-300 px-4 py-2">001</td>
+                        <td class="border border-gray-300 px-4 py-2">Dr. Kazi Musfiqur Rahman</td>
+                        <td class="border border-gray-300 px-4 py-2">2024-12-15</td>
+                        <td class="border border-gray-300 px-4 py-2">10:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">002</td>
+                        <td class="border border-gray-300 px-4 py-2">002</td>
+                        <td class="border border-gray-300 px-4 py-2">Dristy</td>
+                        <td class="border border-gray-300 px-4 py-2">002</td>
+                        <td class="border border-gray-300 px-4 py-2">Sanjida Faria</td>
+                        <td class="border border-gray-300 px-4 py-2">2024-12-16</td>
+                        <td class="border border-gray-300 px-4 py-2">2:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">003</td>
+                        <td class="border border-gray-300 px-4 py-2">003</td>
+                        <td class="border border-gray-300 px-4 py-2">Tasdik</td>
+                        <td class="border border-gray-300 px-4 py-2">003</td>
+                        <td class="border border-gray-300 px-4 py-2">Tasniya</td>
+                        <td class="border border-gray-300 px-4 py-2">2024-12-17</td>
+                        <td class="border border-gray-300 px-4 py-2">11:30 AM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('./images/edit\ dc.jpg'); /* Replace with the actual image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <script>
+        function openUpdatePopup(doctorId, name, designation, phoneNumber) {
+            document.getElementById('doctorId').value = doctorId;
+            document.getElementById('doctorName').value = name;
+            document.getElementById('doctorDesignation').value = designation;
+            document.getElementById('doctorPhone').value = phoneNumber;
+            document.getElementById('updatePopup').classList.remove('hidden');
+        }
+
+        function submitUpdate() {
+            document.getElementById('updatePopup').classList.add('hidden');
+            document.getElementById('confirmationPopup').classList.remove('hidden');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 5000);
+        }
+
+        function cancelUpdate() {
+            document.getElementById('updatePopup').classList.add('hidden');
+        }
+    </script>
+</head>
+<body class="bg-gray-900 bg-opacity-70 min-h-screen">
+    <div class="container mx-auto py-8">
+        <!-- Back Button -->
+        <div class="mb-4">
+            <a href="index.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Back</a>
+        </div>
+
+        <!-- Doctor List Table -->
+        <div class="bg-white shadow-md rounded p-4">
+            <h2 class="text-xl font-semibold mb-4">Doctor Management</h2>
+            <table class="table-auto w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-300 px-4 py-2">Doctor ID</th>
+                        <th class="border border-gray-300 px-4 py-2">Name</th>
+                        <th class="border border-gray-300 px-4 py-2">Designation</th>
+                        <th class="border border-gray-300 px-4 py-2">Phone Number</th>
+                        <th class="border border-gray-300 px-4 py-2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">001</td>
+                        <td class="border border-gray-300 px-4 py-2">Sanjida Faria</td>
+                        <td class="border border-gray-300 px-4 py-2">Cardiologist</td>
+                        <td class="border border-gray-300 px-4 py-2">123-456-7890</td>
+                        <td class="border border-gray-300 px-4 py-2">
+                            <button onclick="openUpdatePopup('001', 'Sanjida Faria', 'Cardiologist', '123-456-7890')" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-red-600">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">002</td>
+                        <td class="border border-gray-300 px-4 py-2">Kazi Musfiqur Rahman</td>
+                        <td class="border border-gray-300 px-4 py-2">Neurologist</td>
+                        <td class="border border-gray-300 px-4 py-2">987-654-3210</td>
+                        <td class="border border-gray-300 px-4 py-2">
+                            <button onclick="openUpdatePopup('002', 'Kazi Musfiqur Rahman', 'Neurologist', '987-654-3210')" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-red-600">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Update Popup -->
+        <div id="updatePopup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white p-6 rounded shadow-md text-center">
+                <p class="text-lg font-semibold mb-4">Update Doctor Record</p>
+                <form>
+                    <div class="mb-4">
+                        <label for="doctorId" class="block text-left font-medium">Doctor ID</label>
+                        <input id="doctorId" type="text" class="w-full border border-gray-300 px-4 py-2 rounded" readonly>
+                    </div>
+                    <div class="mb-4">
+                        <label for="doctorName" class="block text-left font-medium">Name</label>
+                        <input id="doctorName" type="text" class="w-full border border-gray-300 px-4 py-2 rounded">
+                    </div>
+                    <div class="mb-4">
+                        <label for="doctorDesignation" class="block text-left font-medium">Designation</label>
+                        <input id="doctorDesignation" type="text" class="w-full border border-gray-300 px-4 py-2 rounded">
+                    </div>
+                    <div class="mb-4">
+                        <label for="doctorPhone" class="block text-left font-medium">Phone Number</label>
+                        <input id="doctorPhone" type="text" class="w-full border border-gray-300 px-4 py-2 rounded">
+                    </div>
+                    <div class="flex justify-between">
+                        <button type="button" onclick="cancelUpdate()" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Cancel</button>
+                        <button type="button" onclick="submitUpdate()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Confirmation Popup -->
+        <div id="confirmationPopup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white p-6 rounded shadow-md text-center">
+                <p class="text-lg font-semibold mb-4">Doctor record has been updated.</p>
+                <p class="text-sm">You will be redirected to the homepage in 5 seconds...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

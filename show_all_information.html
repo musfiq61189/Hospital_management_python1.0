@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('./images/5006163.jpg'); /* Replace with the actual image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto py-8">
+        <!-- Back Button -->
+        <div class="mb-4">
+            <a href="index.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Back</a>
+        </div>
+
+        <!-- Patient Table -->
+        <div class="bg-white shadow-md rounded p-4 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Patient Information</h2>
+            <table class="table-auto w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-300 px-4 py-2">Patient ID</th>
+                        <th class="border border-gray-300 px-4 py-2">Name</th>
+                        <th class="border border-gray-300 px-4 py-2">Age</th>
+                        <th class="border border-gray-300 px-4 py-2">Gender</th>
+                        <th class="border border-gray-300 px-4 py-2">Diagnosis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">001</td>
+                        <td class="border border-gray-300 px-4 py-2">Mehedi</td>
+                        <td class="border border-gray-300 px-4 py-2">45</td>
+                        <td class="border border-gray-300 px-4 py-2">Male</td>
+                        <td class="border border-gray-300 px-4 py-2">Hypertension</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">002</td>
+                        <td class="border border-gray-300 px-4 py-2">Dristy</td>
+                        <td class="border border-gray-300 px-4 py-2">30</td>
+                        <td class="border border-gray-300 px-4 py-2">Female</td>
+                        <td class="border border-gray-300 px-4 py-2">Diabetes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Staff Table -->
+        <div class="bg-white shadow-md rounded p-4 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Staff Information</h2>
+            <table class="table-auto w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-300 px-4 py-2">Staff ID</th>
+                        <th class="border border-gray-300 px-4 py-2">Name</th>
+                        <th class="border border-gray-300 px-4 py-2">Role</th>
+                        <th class="border border-gray-300 px-4 py-2">Shift</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">001</td>
+                        <td class="border border-gray-300 px-4 py-2">Tasniya</td>
+                        <td class="border border-gray-300 px-4 py-2">Nurse</td>
+                        <td class="border border-gray-300 px-4 py-2">Day</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">002</td>
+                        <td class="border border-gray-300 px-4 py-2">Sadab</td>
+                        <td class="border border-gray-300 px-4 py-2">Technician</td>
+                        <td class="border border-gray-300 px-4 py-2">Night</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Doctors Table -->
+        <div class="bg-white shadow-md rounded p-4 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Doctor Information</h2>
+            <table class="table-auto w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-300 px-4 py-2">Doctor ID</th>
+                        <th class="border border-gray-300 px-4 py-2">Name</th>
+                        <th class="border border-gray-300 px-4 py-2">Designation</th>
+                        <th class="border border-gray-300 px-4 py-2">Phone Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">001</td>
+                        <td class="border border-gray-300 px-4 py-2">Sanjida Faria</td>
+                        <td class="border border-gray-300 px-4 py-2">Cardiologist</td>
+                        <td class="border border-gray-300 px-4 py-2">123-456-7890</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">002</td>
+                        <td class="border border-gray-300 px-4 py-2">Kazi Musfiqur Rahman</td>
+                        <td class="border border-gray-300 px-4 py-2">Neurologist</td>
+                        <td class="border border-gray-300 px-4 py-2">987-654-3210</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Inventory Table -->
+        <div class="bg-white shadow-md rounded p-4 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Inventory</h2>
+            <table class="table-auto w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-300 px-4 py-2">Inventory ID</th>
+                        <th class="border border-gray-300 px-4 py-2">Name</th>
+                        <th class="border border-gray-300 px-4 py-2">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">001</td>
+                        <td class="border border-gray-300 px-4 py-2">Syringes</td>
+                        <td class="border border-gray-300 px-4 py-2">200</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">002</td>
+                        <td class="border border-gray-300 px-4 py-2">Gloves</td>
+                        <td class="border border-gray-300 px-4 py-2">500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

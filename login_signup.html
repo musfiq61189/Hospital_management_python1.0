@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin & User Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('./images/log\ in.avif'); /* Replace with the actual image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <main class="container mx-auto mt-10">
+        <!-- Selection Menu -->
+        <div id="selectionMenu" class="bg-white rounded shadow p-6 max-w-md mx-auto">
+            <h2 class="text-2xl font-bold text-gray-700 mb-4">Choose Login Type</h2>
+            <div class="space-y-4">
+                <button onclick="showSection('adminLoginSection')" class="bg-blue-500 text-white p-3 rounded shadow hover:bg-blue-600 w-full">Admin Login</button>
+                <button onclick="showSection('userLoginSection')" class="bg-green-500 text-white p-3 rounded shadow hover:bg-green-600 w-full">User Login</button>
+            </div>
+        </div>
+
+        <!-- Admin Login Section -->
+        <div id="adminLoginSection" class="hidden bg-white rounded shadow p-6 max-w-md mx-auto">
+            <h2 class="text-2xl font-bold text-gray-700 mb-4">Admin Login</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="adminUsername" class="block text-gray-600">Username</label>
+                    <input type="text" id="adminUsername" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <div>
+                    <label for="adminPassword" class="block text-gray-600">Password</label>
+                    <input type="password" id="adminPassword" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <button  type="submit" class="bg-blue-500 text-white p-3 rounded shadow hover:bg-blue-600 w-full"><a href="./index.html">Login</a></button>
+                <p class="text-sm text-center text-gray-600 mt-4">Don't have an account? <button type="button" onclick="showSection('adminSignUpSection')" class="text-blue-500 hover:underline">Sign Up</button></p>
+                <p class="text-sm text-center text-gray-600 mt-4"><button type="button" onclick="showSection('selectionMenu')" class="text-gray-500 hover:underline">Back to Menu</button></p>
+            </form>
+        </div>
+
+        <!-- Admin Sign-Up Section -->
+        <div id="adminSignUpSection" class="hidden bg-white rounded shadow p-6 max-w-md mx-auto">
+            <h2 class="text-2xl font-bold text-gray-700 mb-4">Admin Sign Up</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="newAdminUsername" class="block text-gray-600">Username</label>
+                    <input type="text" id="newAdminUsername" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <div>
+                    <label for="newAdminPassword" class="block text-gray-600">Password</label>
+                    <input type="password" id="newAdminPassword" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <div>
+                    <label for="confirmAdminPassword" class="block text-gray-600">Confirm Password</label>
+                    <input type="password" id="confirmAdminPassword" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <button type="submit" class="bg-green-500 text-white p-3 rounded shadow hover:bg-green-600 w-full">Sign Up</button>
+                <p class="text-sm text-center text-gray-600 mt-4">Already have an account? <button type="button" onclick="showSection('adminLoginSection')" class="text-blue-500 hover:underline">Login</button></p>
+                <p class="text-sm text-center text-gray-600 mt-4"><button type="button" onclick="showSection('selectionMenu')" class="text-gray-500 hover:underline">Back to Menu</button></p>
+            </form>
+        </div>
+
+        <!-- User Login Section -->
+        <div id="userLoginSection" class="hidden bg-white rounded shadow p-6 max-w-md mx-auto">
+            <h2 class="text-2xl font-bold text-gray-700 mb-4">User Login</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="userUsername" class="block text-gray-600">Username</label>
+                    <input type="text" id="userUsername" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <div>
+                    <label for="userPassword" class="block text-gray-600">Password</label>
+                    <input type="password" id="userPassword" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white p-3 rounded shadow hover:bg-blue-600 w-full">Login</button>
+                <p class="text-sm text-center text-gray-600 mt-4">Don't have an account? <button type="button" onclick="showSection('userSignUpSection')" class="text-blue-500 hover:underline">Sign Up</button></p>
+                <p class="text-sm text-center text-gray-600 mt-4"><button type="button" onclick="showSection('selectionMenu')" class="text-gray-500 hover:underline">Back to Menu</button></p>
+            </form>
+        </div>
+
+        <!-- User Sign-Up Section -->
+        <div id="userSignUpSection" class="hidden bg-white rounded shadow p-6 max-w-md mx-auto">
+            <h2 class="text-2xl font-bold text-gray-700 mb-4">User Sign Up</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="newUserUsername" class="block text-gray-600">Username</label>
+                    <input type="text" id="newUserUsername" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <div>
+                    <label for="newUserPassword" class="block text-gray-600">Password</label>
+                    <input type="password" id="newUserPassword" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <div>
+                    <label for="confirmUserPassword" class="block text-gray-600">Confirm Password</label>
+                    <input type="password" id="confirmUserPassword" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <button type="submit" class="bg-green-500 text-white p-3 rounded shadow hover:bg-green-600 w-full">Sign Up</button>
+                <p class="text-sm text-center text-gray-600 mt-4">Already have an account? <button type="button" onclick="showSection('userLoginSection')" class="text-blue-500 hover:underline">Login</button></p>
+                <p class="text-sm text-center text-gray-600 mt-4"><button type="button" onclick="showSection('selectionMenu')" class="text-gray-500 hover:underline">Back to Menu</button></p>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Show the appropriate section and hide others
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main > div');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

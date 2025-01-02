@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('./images/st\ lisst.jpg'); /* Replace with the actual image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <script>
+        function deletePatient() {
+            const popup = document.getElementById('deletePopup');
+            popup.classList.remove('hidden');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 5000);
+        }
+    </script>
+</head>
+<body class="bg-gray-900 bg-opacity-70 min-h-screen">
+    <div class="container mx-auto py-8">
+        <!-- Back Button -->
+        <div class="mb-4">
+            <a href="index.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Back</a>
+        </div>
+
+        <!-- Patient List Table -->
+        <div class="bg-white shadow-md rounded p-4">
+            <h2 class="text-xl font-semibold mb-4">Staff List</h2>
+            <table class="table-auto w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-300 px-4 py-2">Staff ID</th>
+                        <th class="border border-gray-300 px-4 py-2">Name</th>
+                        <th class="border border-gray-300 px-4 py-2">Role</th>
+                        <th class="border border-gray-300 px-4 py-2">Shift</th>
+                        <th class="border border-gray-300 px-4 py-2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">001</td>
+                        <td class="border border-gray-300 px-4 py-2">Mehedi</td>
+                        <td class="border border-gray-300 px-4 py-2">Cleaner</td>
+                        <td class="border border-gray-300 px-4 py-2">Day</td>
+                        <td class="border border-gray-300 px-4 py-2">
+                            <button onclick="deletePatient()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">002</td>
+                        <td class="border border-gray-300 px-4 py-2">Dristy</td>
+                        <td class="border border-gray-300 px-4 py-2">Nurse</td>
+                        <td class="border border-gray-300 px-4 py-2">Female</td>
+                        <td class="border border-gray-300 px-4 py-2">
+                            <button onclick="deletePatient()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">003</td>
+                        <td class="border border-gray-300 px-4 py-2">Abbas</td>
+                        <td class="border border-gray-300 px-4 py-2">60</td>
+                        <td class="border border-gray-300 px-4 py-2">Watch Man</td>
+                        <td class="border border-gray-300 px-4 py-2">
+                            <button onclick="deletePatient()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Delete Popup -->
+        <div id="deletePopup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white p-6 rounded shadow-md text-center">
+                <p class="text-lg font-semibold mb-4">Staff record has been deleted.</p>
+                <p class="text-sm">You will be redirected to the homepage in 5 seconds...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
